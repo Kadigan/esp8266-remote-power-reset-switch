@@ -18,4 +18,7 @@ It exposes the following paths:
 
 Lines used for the "switches" are D1 and D2.
 
-Schematic & board: TBD
+Circuit essentials:
+
+![ESP8266 switch](https://github.com/Kadigan/esp8266-remote-power-reset-switch/assets/16637976/61f10ace-5ef8-449d-afa2-13582a699e72)
+
