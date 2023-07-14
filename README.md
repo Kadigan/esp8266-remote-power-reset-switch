@@ -10,7 +10,7 @@ You can add a pin header to "passthru" your existing power/reset switches if you
 
 I would also recommend *against* using D0 for any outputs, because it seems to fluctuate on board start-up - it does *something* on that pin, and I didn't care enough to find out *what*. Don't use it if you don't want spurious activations on ESP boot.
 
-**Powering the ESP8266 up is entirely up to you** – just keep in mind that if you power it from the PC you want to switch on, you'll want to hook into +5VSB so that it doesn't get shut off with the rest of the system. Also keep in mind that +5VSB is _not guaranteed_ to come back up on mains restore – my motherboards (the ones where I cared to check, at least) usually _didn't_, and required _at least one manual power-up_ to restore its presence. Something to keep in mind; I powered my board using an external mains power supply.
+**Powering the ESP8266 up is entirely up to you** – just keep in mind that if you power it from the PC you want to switch on, you'll want to hook into the +5VSB rail, so that it doesn't get shut off with the rest of the system. Also keep in mind that +5VSB is _not guaranteed_ to come back up on mains restore – my power supplies (the ones where I cared to check, at least) usually _didn't_ bring it back up, and required _at least one physical power-up_ to restore its presence. _Something to keep in mind._ I powered my board using an external mains power supply.
 
 **The board is configured for power-button long-hold at 5 seconds.** For modern boards, soft-off is usually at 4 seconds; older boards may require the full 8 second hold (would recommend 9) - adjust as necessary, it should be hard-coded into `actions.cpp`.
 
