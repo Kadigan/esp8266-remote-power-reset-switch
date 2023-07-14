@@ -27,4 +27,4 @@ The transoptors are wired in series; this should ensure that the polarity of the
 
 You can add a pin header to "passthru" your existing power/reset switches, if you want to.
 
-Powering the ESP8266 up is entirely up to you.
+Powering the ESP8266 up is entirely up to you - just keep in mind that if you power it from the PC you want to switch on, you'll want to hook into +5VSB so that it doesn't get killed with the rest of the system. ;)
