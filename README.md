@@ -3,7 +3,7 @@
 ### This project was developed on NodeMCU v1.0 (lol1n board).
 
 
-It's essentially what it says on the tin: a remote reset/power "button" you connect to your WiFi.
+It's essentially what it says on the tin: a remote reset/power "button" you connect to your WiFi. Automatically reconnects to WiFi when connection is lost.
 
 It exposes the following paths:
 
