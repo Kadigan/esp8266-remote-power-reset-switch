@@ -6,7 +6,7 @@ The transoptors are wired in series; this **should** ensure that the polarity of
 
 **If you decide to use relays instead** (to ensure maximum electrical separation) - that's also doable, but you'll want to use a driver like a ULN2003 or something similar (ULN2003 is rated at 500 mA per output; if your coil requires more, wire a pair of outputs per coil – it's as simple as shorting adjacent inputs together, and adjacent outputs together). ULN2003 has 7 of these drivers and comes equipped with the reverse diodes for spike dissipation, so it's a single-chip solution. Not sure if a pull-down is necessary in this situation (or even for this board).
 
-You can add a pin header to "pass through" your existing power/reset switches if you want to, regardless of the solution you pick. It's what I did.
+You can add a pin header to "pass-through" your existing power/reset switches if you want to, regardless of the solution you pick. It's what I did.
 
 I would also recommend *against* using D0 for any outputs, because it seems to fluctuate on board start-up - it does *something* on that pin, and I didn't care enough to find out *what* (might have something to do with serial, YMMV). Don't use it if you don't want spurious activations on ESP boot.
 
@@ -14,7 +14,7 @@ I would also recommend *against* using D0 for any outputs, because it seems to f
 
 **The board is configured for power-button long-hold at 5 seconds.** For modern boards, soft-off is usually at 4 seconds; older boards may require the full 8 second hold (would recommend 9 seconds in those cases) - adjust as necessary, it should be hard-coded into `actions.cpp`.
 
-**If you want to use this with an older, AT board** – one that requires a physical switch to be turned on or off – then I would recommend a bi-stable coil on a pass-through mains voltage line instead. A generic relay will work just as well, but if you don't want the headache of having to keep a coil powered for extended periods of time, it's what I'd recommend. I used an RT424FO5 in another project that switches mains on and off, because it can run off of 5V (so I could have a common supply for it _and_ the board), has a low DC set voltage if required, is rated at up to 8A at 250V AC, and can go up to 400V AC if required. _Your mileage may vary._ Remember to use a coil that is rated _at mains voltage_ for your area, and size it up to your load (typ. PC loads are around the 800W mark nowadays).
+**If you want to use this with an older, AT board** – one that requires a physical switch to be turned on or off – then I would recommend a bi-stable coil on a "pass-through" mains voltage line instead. A generic relay will work just as well, but if you don't want the headache of having to keep a coil powered for extended periods of time, it's what I'd recommend. I used an RT424FO5 in another project that switches mains on and off, because it can run off of 5V (so I could have a common supply for it _and_ the board), has a low DC set voltage if required, is rated at up to 8A at 250V AC, and can go up to 400V AC if required. _Your mileage may vary._ Remember to use a coil that is rated _at mains voltage_ for your area, and size it up to your load (typ. PC loads are around the 800W mark nowadays).
 
 ---
 The code exposes the following paths:
