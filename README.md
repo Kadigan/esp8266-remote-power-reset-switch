@@ -2,7 +2,7 @@
 ## It's essentially what it says on the tin: a remote reset/power "button" you connect to your WiFi. Automatically reconnects to WiFi when connection is lost.
 ### This project was developed on NodeMCU v1.0 (lol1n board).
 
-The transoptors are wired in series; this **should** ensure that the polarity of the connection doesn't matter - but *in case that doesn't work* or that you see weird effects like PWR influencing RST (some boards may be more sensitive to this than others), your board's manual should tell you the correct polarity to use (if the board itself doesn't have it printed on the silkscreen - they often do).
+The optocouplers are wired in series; this **should** ensure that the polarity of the connection doesn't matter - but *in case that doesn't work* or that you see weird effects like PWR influencing RST (some boards may be more sensitive to this than others), your board's manual should tell you the correct polarity to use (if the board itself doesn't have it printed on the silkscreen - they often do).
 
 **If you decide to use relays instead** (to ensure maximum electrical separation) - that's also doable, but you'll want to use a driver like a ULN2003 or something similar (ULN2003 is rated at 500 mA per output; if your coil requires more, wire a pair of outputs per coil – it's as simple as shorting adjacent inputs together, and adjacent outputs together). ULN2003 has 7 of these drivers and comes equipped with the reverse diodes for spike dissipation, so it's a single-chip solution. Not sure if a pull-down is necessary in this situation (or even for this board).
 
