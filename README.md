@@ -6,7 +6,7 @@ The transoptors are wired in series; this **should** ensure that the polarity of
 
 **If you decide to use relays instead** (to ensure maximum electrical separation) - that's also doable, but you'll want to use a driver like a ULN2003 or something similar (ULN2003 is rated at 500 mA per output; if your coil requires more, wire a pair of outputs per coil – it's as simple as shorting adjacent inputs together, and adjacent outputs together). ULN2003 has 7 of these drivers and comes equipped with the reverse diodes for spike dissipation, so it's a single-chip solution. Not sure if a pull-down is necessary in this situation (or even for this board).
 
-You can add a pin header to "passthru" your existing power/reset switches if you want to, regardless of the solution you pick. It's what I did.
+You can add a pin header to "pass through" your existing power/reset switches if you want to, regardless of the solution you pick. It's what I did.
 
 I would also recommend *against* using D0 for any outputs, because it seems to fluctuate on board start-up - it does *something* on that pin, and I didn't care enough to find out *what*. Don't use it if you don't want spurious activations on ESP boot.
 
