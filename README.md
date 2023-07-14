@@ -8,7 +8,7 @@ If you decide to use relays instead (to ensure maximum electrical separation) - 
 
 You can add a pin header to "passthru" your existing power/reset switches if you want to, regardless of the solution you pick. It's what I did.
 
-I would also recommend *against* using D0 for any outputs, because it seems to fluctuate on board start-up - it does *something* on that pin, and I didn't care enough to find out *what*.
+I would also recommend *against* using D0 for any outputs, because it seems to fluctuate on board start-up - it does *something* on that pin, and I didn't care enough to find out *what*. Don't use it if you don't want spurious activations on ESP boot.
 
 Powering the ESP8266 up is entirely up to you - just keep in mind that if you power it from the PC you want to switch on, you'll want to hook into +5VSB so that it doesn't get killed with the rest of the system.
 
