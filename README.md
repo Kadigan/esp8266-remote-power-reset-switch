@@ -8,7 +8,7 @@ The transoptors are wired in series; this **should** ensure that the polarity of
 
 You can add a pin header to "pass through" your existing power/reset switches if you want to, regardless of the solution you pick. It's what I did.
 
-I would also recommend *against* using D0 for any outputs, because it seems to fluctuate on board start-up - it does *something* on that pin, and I didn't care enough to find out *what*. Don't use it if you don't want spurious activations on ESP boot.
+I would also recommend *against* using D0 for any outputs, because it seems to fluctuate on board start-up - it does *something* on that pin, and I didn't care enough to find out *what* (might have something to do with serial, YMMV). Don't use it if you don't want spurious activations on ESP boot.
 
 **Powering the ESP8266 up is entirely up to you** – just keep in mind that if you power it from the PC you want to switch on, you'll want to hook into the +5VSB rail, so that it doesn't get shut off with the rest of the system. Also keep in mind that +5VSB is _not guaranteed_ to come back up on mains restore – my power supplies (the ones where I cared to check, at least) usually _didn't_ bring it back up, and required _at least one physical power-up_ to restore its presence. _Something to keep in mind._ I powered my board using an external mains power supply.
 
