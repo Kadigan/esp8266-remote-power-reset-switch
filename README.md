@@ -1,5 +1,5 @@
 
-# A remote power/reset "button" based around an ESP8266
+# A remote power/reset "button" based on an ESP8266
 ### This project was developed on NodeMCU v1.0 (lol1n board).
 
 
