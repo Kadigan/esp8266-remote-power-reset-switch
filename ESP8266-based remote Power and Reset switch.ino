@@ -53,7 +53,7 @@ void loop() {
       delay(10);
       ledOFF();
       delay(30);
-      statusLedBlinkPreviousMillis = millis(); // save the LATEST time, so that we check time+interval to LAST CHECK, not a set timer like the blinker
+      statusLedBlinkPreviousMillis = millis(); // save the LATEST time, so that we check time+interval to LAST CHECK, not a set timer
 
       if ( !timeConfigured ){
         if ( handleTimeConfiguration() ){
